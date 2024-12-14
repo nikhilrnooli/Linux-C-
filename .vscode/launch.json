@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C/C++ Program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/output.exe", // Path to your compiled program
+            "args": [], // Command-line arguments for your program, if any
+            "stopAtEntry": false, // Whether to stop at the program entry point
+            "cwd": "${workspaceFolder}", // Current working directory
+            "environment": [],
+            "externalConsole": true, // Use an external terminal for output
+            "MIMode": "gdb", // Debugger mode
+            "miDebuggerPath": "/usr/bin/gdb-multiarch", // Path to GDB or similar debugger
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build" // Optional: Use this if you have a task named "Build"
+        }
+    ]
+}
